@@ -9,6 +9,7 @@ import javafx.scene.input.MouseEvent;
 import org.json.simple.JSONObject;
 import sk.kosickaakademia.kolesarova.exchange1.api.ApiRequest;
 import sk.kosickaakademia.kolesarova.exchange1.calc.CalcExchangeRates;
+import sk.kosickaakademia.kolesarova.exchange1.database.MongoDB;
 
 import java.util.Arrays;
 import java.util.Set;
@@ -30,6 +31,7 @@ public class Controller {
         calc.calculateGUI(value,key);
         txt_rate.setText(String.valueOf(getRate(key)));
         txt_result.setText(String.valueOf(calc.calculateGUI(value,key)));
+        new MongoDB().insertAllResult(key,value,calc.calculateGUI(value,key));
     }
 
     public String[] getNameOfCurrency(){

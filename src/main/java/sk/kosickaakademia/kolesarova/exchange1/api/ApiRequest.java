@@ -40,7 +40,7 @@ public class ApiRequest {
                     inline += scanner.nextLine();
                 }
                 scanner.close();
-                System.out.println(inline);
+                //System.out.println(inline);
                 return inline;//vratime komplet cely vysledok zo servra sko string
             }
         } catch (Exception e) {
