@@ -1,5 +1,6 @@
 package sk.kosickaakademia.kolesarova.exchange1.calc;
 
+import org.json.simple.JSONObject;
 import sk.kosickaakademia.kolesarova.exchange1.api.ApiRequest;
 
 import java.util.Collections;
@@ -34,5 +35,14 @@ public class CalcExchangeRates {
     //pomocná metoda na vypis výsledkov kým nie je GUI
     private void print(String from, String to, double eur, double result, double rate){
         System.out.println(eur+" "+from+" "+" -> "+result+" "+to+" (exchange rate: "+rate+" )");
+    }
+
+
+    //pre  GUI
+    public double calculateGUI(double euro, String key){
+        JSONObject jsonObject = new ApiRequest().parseString();
+        double rate = (double)jsonObject.get(key);
+        double result = rate*euro;
+        return result;
     }
 }

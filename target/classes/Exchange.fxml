@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="300.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sk.kosickaakademia.kolesarova.exchange1.gui.Controller">
+   <children>
+      <Button fx:id="btn_change" layoutX="347.0" layoutY="121.0" mnemonicParsing="false" onAction="#change" text="Change" />
+      <TextField fx:id="txt_value" layoutX="137.0" layoutY="74.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="86.0" layoutY="76.0" text="From:" textFill="#10bd24">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="322.0" layoutY="79.0" text="EUR">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="123.0" text="To:" textFill="#e2a412">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbx_currency" layoutX="136.0" layoutY="121.0" onMouseClicked="#name_currency" prefHeight="25.0" prefWidth="175.0" />
+      <Label layoutX="88.0" layoutY="172.0" text="Result:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_result" layoutX="137.0" layoutY="170.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="90.0" layoutY="217.0" text="Rate:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_rate" layoutX="137.0" layoutY="215.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>

@@ -26,7 +26,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cmbx_currency" layoutX="136.0" layoutY="121.0" prefHeight="25.0" prefWidth="175.0" />
+      <ComboBox fx:id="cmbx_currency" layoutX="136.0" layoutY="121.0" onMouseClicked="#name_currency" prefHeight="25.0" prefWidth="175.0" />
       <Label layoutX="88.0" layoutY="172.0" text="Result:">
          <font>
             <Font size="14.0" />

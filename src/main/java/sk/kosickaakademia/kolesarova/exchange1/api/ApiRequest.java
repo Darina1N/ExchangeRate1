@@ -74,5 +74,20 @@ public class ApiRequest {
         }
         return null;
     }
-}
+
+        public JSONObject parseString(){
+            String inline = getRatesFromAPIServer();
+            JSONParser parse = new JSONParser();
+            JSONObject data_obj = null;
+            try {
+                data_obj = (JSONObject) parse.parse(inline);
+                JSONObject obj = (JSONObject) data_obj.get("rates");
+                return obj;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
+
 
